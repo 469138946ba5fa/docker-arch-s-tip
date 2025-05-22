@@ -38,33 +38,35 @@ docker multi-arch s-tip
   
   其中 .env 配置文件中 `HOSTS_JSON` 变量是服务器及其登陆相关参数配置  
     - .env 传参数需要使用压缩的 json 格式，多条server格式示例如下  
-```json
-{"info":[{"host":"server1.com","username":"root","port":22,"password":"123456"},{"host":"server2.com","username":"root","port":8022,"password":"123456"}]}
-```
+  ```json
+  {"info":[{"host":"server1.com","username":"root","port":22,"password":"123456"},{"host":"server2.com","username":"root","port":8022,"password":"123456"}]}
+  ```
+
     - 它的扩展格式如下，可以编辑好之后再进行json压缩，填入 .env  
-```json
-{
-  "info": [
-    {
-      "host": "server1.com",
-      "username": "username1",
-      "port": 22,
-      "password": "password1"
-    },
-    {
-      "host": "server2.com",
-      "username": "username2",
-      "port": 8022,
-      "password": "password2"
-    }
-  ]
-}
-```
+
+  ```json
+  {
+    "info": [
+      {
+        "host": "server1.com",
+        "username": "username1",
+        "port": 22,
+        "password": "password1"
+      },
+      {
+        "host": "server2.com",
+        "username": "username2",
+        "port": 8022,
+        "password": "password2"
+      }
+    ]
+  }
+  ```
   其中 .env 配置文件中 `SCRIPT` 变量是远程执行命令，比如  
     - 进入主目录 然后检查cpu系统架构等相关信息，然后退出  
-```bash
-cd ~/ ; clear ; ps -o pid,%cpu,%mem,comm ; uname -moprsv ; exit
-```
+  ```bash
+  cd ~/ ; clear ; ps -o pid,%cpu,%mem,comm ; uname -moprsv ; exit
+  ```
   其中 .env 配置文件中 `TELEGRAM_TOKEN` 变量是 telegram 的 api 调用 token 通过 @BotFather 获取  
   其中 .env 配置文件中 `TELEGRAM_USERID` 变量是  telegram 的 user id 通过 @userinfobot 或 @HaxTG_bot 获取  
   其中 .env 配置文件中 `AUTHTYPE` 变量是认证方式，通过端口判断，默认是 password 也可以选择 oauth2   
