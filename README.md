@@ -2,8 +2,6 @@
 docker multi-arch s-tip
 本项目通过 Docker 构建了一个多架构连接服务器并执行命令邮件反馈的测试容器，用于探索连接远程服务器以及邮件发送。
 
-![1](images/1.png)
-
 ![Watchers](https://img.shields.io/github/watchers/469138946ba5fa/docker-arch-s-tip) ![Stars](https://img.shields.io/github/stars/469138946ba5fa/docker-arch-s-tip) ![Forks](https://img.shields.io/github/forks/469138946ba5fa/docker-arch-s-tip) ![Vistors](https://visitor-badge.laobi.icu/badge?page_id=469138946ba5fa.docker-arch-s-tip) ![LICENSE](https://img.shields.io/badge/license-CC%20BY--SA%204.0-green.svg)
 <a href="https://star-history.com/#469138946ba5fa/docker-arch-s-tip&Date">
   <picture>
