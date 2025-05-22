@@ -32,15 +32,15 @@ docker multi-arch s-tip
 ## 特点
 
 - **多架构连接服务器并执行命令邮件反馈的测试测试**  
-  实验测试构建多架构连接服务器并执行命令邮件反馈的测试镜像需求。
-  其中 .env 配置文件中 `CRON_SCHEDULE` 变量是任务调度配置，比如
-    - 0 8 * * * ，每8:00执行一次远程连接并执行信息反馈
-  其中 .env 配置文件中 `HOSTS_JSON` 变量是服务器及其登陆相关参数配置
-    - .env 传参数需要使用压缩的 json 格式，多条server格式示例如下
+  实验测试构建多架构连接服务器并执行命令邮件反馈的测试镜像需求。  
+  其中 .env 配置文件中 `CRON_SCHEDULE` 变量是任务调度配置，比如  
+    - 0 8 * * * ，每8:00执行一次远程连接并执行信息反馈  
+  其中 .env 配置文件中 `HOSTS_JSON` 变量是服务器及其登陆相关参数配置  
+    - .env 传参数需要使用压缩的 json 格式，多条server格式示例如下  
 ```json
 {"info":[{"host":"server1.com","username":"root","port":22,"password":"123456"},{"host":"server2.com","username":"root","port":8022,"password":"123456"}]}
 ```
-    - 它的扩展格式如下，可以编辑好之后再进行json压缩，填入 .env
+    - 它的扩展格式如下，可以编辑好之后再进行json压缩，填入 .env  
 ```json
 {
   "info": [
@@ -59,18 +59,20 @@ docker multi-arch s-tip
   ]
 }
 ```
-  其中 .env 配置文件中 `SCRIPT` 变量是远程执行命令，比如
-    - 进入主目录 然后检查cpu系统架构等相关信息，然后退出
-      - cd ~/ ; clear ; ps -o pid,%cpu,%mem,comm ; uname -moprsv ; exit
-  其中 .env 配置文件中 `TELEGRAM_TOKEN` 变量是 telegram 的 api 调用 token 通过 @BotFather 获取
-  其中 .env 配置文件中 `TELEGRAM_USERID` 变量是  telegram 的 user id 通过 @userinfobot 或 @HaxTG_bot 获取
-  其中 .env 配置文件中 `AUTHTYPE` 变量是认证方式，通过端口判断，默认是 password 也可以选择 oauth2 
-  其中 .env 配置文件中 `MAILADDR` 变量是邮箱服务器域名
-  其中 .env 配置文件中 `MAILPORT` 变量是邮箱服务器端口 
-  其中 .env 配置文件中 `MAILUSERNAME` 变量是邮箱服务器登录账号
-  其中 .env 配置文件中 `MAILFROM` 变量是发件人邮箱
-  其中 .env 配置文件中 `MAILPASSWORD` 变量是邮箱服务器登录密码
-  其中 .env 配置文件中 `MAILSENDTO` 变量是收件人邮箱
+  其中 .env 配置文件中 `SCRIPT` 变量是远程执行命令，比如  
+    - 进入主目录 然后检查cpu系统架构等相关信息，然后退出  
+```bash
+cd ~/ ; clear ; ps -o pid,%cpu,%mem,comm ; uname -moprsv ; exit
+```
+  其中 .env 配置文件中 `TELEGRAM_TOKEN` 变量是 telegram 的 api 调用 token 通过 @BotFather 获取  
+  其中 .env 配置文件中 `TELEGRAM_USERID` 变量是  telegram 的 user id 通过 @userinfobot 或 @HaxTG_bot 获取  
+  其中 .env 配置文件中 `AUTHTYPE` 变量是认证方式，通过端口判断，默认是 password 也可以选择 oauth2   
+  其中 .env 配置文件中 `MAILADDR` 变量是邮箱服务器域名  
+  其中 .env 配置文件中 `MAILPORT` 变量是邮箱服务器端口   
+  其中 .env 配置文件中 `MAILUSERNAME` 变量是邮箱服务器登录账号  
+  其中 .env 配置文件中 `MAILFROM` 变量是发件人邮箱  
+  其中 .env 配置文件中 `MAILPASSWORD` 变量是邮箱服务器登录密码  
+  其中 .env 配置文件中 `MAILSENDTO` 变量是收件人邮箱  
 
 ## 快速入门
 
