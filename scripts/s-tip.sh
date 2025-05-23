@@ -68,6 +68,9 @@ for info in $(jq -cr '.info[]' <<<"${HOSTS_JSON}");do
   echo "${outputs}" >> result.txt
 done
 
+echo '登陆结果'
+cat result.txt
+
 # 判断 TELEGRAM_TOKEN 变量是否在环境中存在
 # 判断 TELEGRAM_USERID 变量是否在环境中存在
 # 不存在则打印提示并退出，返回一个退出号
